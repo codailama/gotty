@@ -74,7 +74,7 @@ test:
 	go test ./...
 
 cross_compile:
-	GOARM=5 gox -os="linux" -arch="amd64 armhf arm64"  $(BUILD_OPTIONS) -output "${OUTPUT_DIR}/pkg/{{.OS}}_{{.Arch}}/{{.Dir}}"
+	GOARM=5 gox -os="linux" -arch="amd64 arm armhf arm64"  $(BUILD_OPTIONS) -output "${OUTPUT_DIR}/pkg/{{.OS}}_{{.Arch}}/{{.Dir}}"
 
 targz:
 	mkdir -p ${OUTPUT_DIR}/dist
